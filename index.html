@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring Dashboard - Ahcéne KHELIFI | Alternance Bachelor Systèmes & Réseaux</title>
+    <!-- Tailwind CSS pour un design moderne et rapide -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .glow-green { box-shadow: 0 0 15px rgba(34, 197, 94, 0.2); }
+        .glow-blue { box-shadow: 0 0 15px rgba(59, 130, 246, 0.2); }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-black">
+
+    <!-- Top Navigation / Status Bar -->
+    <header class="bg-slate-900 border-b border-slate-800 px-6 py-3 flex flex-wrap justify-between items-center text-xs font-mono">
+        <div class="flex items-center space-x-4">
+            <span class="flex items-center text-emerald-400">
+                <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse mr-2"></span>
+                SYSTEM STATUS: OPERATIONAL
+            </span>
+            <span class="text-slate-500 hidden sm:inline">|</span>
+            <span class="text-slate-400 hidden sm:inline">CLUSTER: HAUTS-DE-FRANCE (VALENCIENNOIS / LILLE)</span>
+        </div>
+        <div class="flex items-center space-x-4 text-slate-400 mt-2 sm:mt-0">
+            <span><i class="fa-solid fa-server mr-1"></i> HOST: CESI-ARRAS-BAC</span>
+            <span><i class="fa-solid fa-clock mr-1"></i> UPTIME: 100% MOTIVATION</span>
+        </div>
+    </header>
+
+    <!-- Main Dashboard Container -->
+    <main class="max-w-7xl mx-auto px-4 py-8 w-full space-y-6">
+
+        <!-- Top Profile & Quick Metrics Row -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            <!-- Operator Card (Photo + ID) -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col justify-between relative overflow-hidden glow-blue">
+                <div class="absolute top-0 right-0 bg-blue-600/20 text-blue-400 text-[10px] font-mono px-3 py-1 rounded-bl-lg border-l border-b border-blue-500/30">
+                    ADMIN_PROFILE_ACTIVE
+                </div>
+                <div class="flex items-center space-x-4">
+                    <!-- Photo intégrée pointant vers image.png -->
+                    <div class="relative">
+                        <img src="image.png" alt="Ahcéne KHELIFI" class="w-20 h-20 rounded-lg object-cover border-2 border-blue-500 shadow-md">
+                        <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-slate-900 rounded-full"></span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-white tracking-wide">Ahcéne KHELIFI</h1>
+                        <p class="text-blue-400 text-xs font-mono mt-0.5">Administrateur Systèmes & Réseaux</p>
+                        <p class="text-slate-400 text-xs mt-1"><i class="fa-solid fa-graduation-cap text-slate-500 mr-1"></i> Admis Bachelor CESI Arras[cite: 1]</p>
+                    </div>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-800/80 flex justify-between items-center text-xs font-mono">
+                    <span class="text-slate-400">DISPONIBILITÉ :</span>
+                    <span class="text-emerald-400 font-semibold bg-emerald-950/60 px-2.5 py-1 rounded border border-emerald-800/50">Alternance Oct. 2026[cite: 1]</span>
+                </div>
+            </div>
+
+            <!-- Metric 1: CPU / Core Competencies -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col justify-between">
+                <div class="flex justify-between items-center text-xs font-mono text-slate-400">
+                    <span>CPU_LOAD [CORE SKILLS]</span>
+                    <span class="text-emerald-400 font-bold">98.4% OPTIMAL</span>
+                </div>
+                <div class="my-4 space-y-2">
+                    <div>
+                        <div class="flex justify-between text-xs mb-1 font-mono">
+                            <span class="text-slate-300">Linux (Debian/Ubuntu/RedHat) & Windows Server</span>
+                            <span class="text-blue-400">95%</span>
+                        </div>
+                        <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                            <div class="bg-blue-500 h-full rounded-full" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-1 font-mono">
+                            <span class="text-slate-300">Réseaux (TCP/IP, VLAN, pfSense)</span>
+                            <span class="text-emerald-400">90%</span>
+                        </div>
+                        <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                            <div class="bg-emerald-500 h-full rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-[11px] text-slate-400 font-mono">
+                    <i class="fa-solid fa-microchip text-blue-400 mr-1"></i> Virtualisation (VMware ESXi) & Active Directory[cite: 1]
+                </div>
+            </div>
+
+            <!-- Metric 2: Incident Resolution / Soft Skills -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col justify-between glow-green">
+                <div class="flex justify-between items-center text-xs font-mono text-slate-400">
+                    <span>SECURITY & RIGOR METRICS</span>
+                    <span class="text-emerald-400 font-bold">ZERO INCIDENT</span>
+                </div>
+                <div class="my-3 space-y-2 text-xs text-slate-300">
+                    <p class="flex items-center"><i class="fa-solid fa-shield-halved text-emerald-400 mr-2"></i> Expérience en sécurité de sites sensibles[cite: 1]</p>
+                    <p class="flex items-center"><i class="fa-solid fa-triangle-exclamation text-yellow-500 mr-2"></i> Gestion de crise & stress optimal[cite: 1]</p>
+                    <p class="flex items-center"><i class="fa-solid fa-lock text-blue-400 mr-2"></i> Respect strict des protocoles et confidentialité[cite: 1]</p>
+                </div>
+                <div class="pt-3 border-t border-slate-800 text-[11px] font-mono text-slate-400 flex justify-between">
+                    <span>PERMIS B & RQTH[cite: 1]</span>
+                    <span class="text-emerald-400">PRÊT</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Middle Section: Detailed Logs & Infrastructure Project -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            <!-- System Logs / Project Experience -->
+            <div class="lg:col-span-2 bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-sm font-mono text-slate-300 flex items-center">
+                            <i class="fa-solid fa-terminal text-emerald-400 mr-2"></i> LIVE_SYSTEM_LOGS // PROJET RÉALISÉ
+                        </h2>
+                        <span class="text-[10px] font-mono bg-slate-800 text-slate-400 px-2 py-0.5 rounded">TSSR Validation (Dec 2025 - Feb 2026)[cite: 1]</span>
+                    </div>
+                    
+                    <div class="bg-slate-950 p-4 rounded-lg font-mono text-xs text-slate-300 space-y-2 border border-slate-800/80 overflow-x-auto">
+                        <p class="text-slate-500">[INFO] Initialisation de l'infrastructure PME virtualisée...</p>
+                        <p><span class="text-blue-400">[OK]</span> Déploiement architecture virtualisation imbriquée via VMware ESXi[cite: 1].</p>
+                        <p><span class="text-emerald-400">[SECURE]</span> Segmentation LAN/WAN et filtrage flux via pfSense[cite: 1].</p>
+                        <p><span class="text-blue-400">[OK]</span> Configuration Windows Server : Active Directory (AD DS), DNS, DHCP, GPO[cite: 1].</p>
+                        <p><span class="text-emerald-400">[SERVICES]</span> Intégration serveur Web Linux (Apache) & stockage NAS (OpenMediaVault)[cite: 1].</p>
+                        <p class="text-yellow-400 animate-pulse">[ALERT] Candidat opérationnel prêt pour déploiement en entreprise !</p>
+                    </div>
+                </div>
+
+                <div class="mt-4 pt-4 border-t border-slate-800 flex flex-wrap gap-2 text-xs font-mono">
+                    <span class="bg-slate-800 text-blue-300 px-2.5 py-1 rounded">#Debian/Ubuntu[cite: 1]</span>
+                    <span class="bg-slate-800 text-blue-300 px-2.5 py-1 rounded">#WindowsServer[cite: 1]</span>
+                    <span class="bg-slate-800 text-emerald-300 px-2.5 py-1 rounded">#Cisco_VLAN</span>
+                    <span class="bg-slate-800 text-purple-300 px-2.5 py-1 rounded">#Google_AI_Fundamentals[cite: 1]</span>
+                </div>
+            </div>
+
+            <!-- Professional Background & Education -->
+            <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col justify-between">
+                <div>
+                    <h2 class="text-sm font-mono text-slate-300 mb-4 flex items-center">
+                        <i class="fa-solid fa-history text-blue-400 mr-2"></i> HISTORIQUE & FORMATION
+                    </h2>
+                    <ul class="space-y-3 text-xs">
+                        <li class="border-l-2 border-blue-500 pl-3">
+                            <p class="font-bold text-white">Palais de Justice de Douai[cite: 1]</p>
+                            <p class="text-slate-400">Agent de sécurité (2022-2026)[cite: 1]</p>
+                        </li>
+                        <li class="border-l-2 border-slate-700 pl-3">
+                            <p class="font-bold text-white">LME Trith-Saint-Léger[cite: 1]</p>
+                            <p class="text-slate-400">Référent Sûreté (2018-2022)[cite: 1]</p>
+                        </li>
+                        <li class="border-l-2 border-emerald-500 pl-3">
+                            <p class="font-bold text-white">Titre TSSR & CESI Arras[cite: 1]</p>
+                            <p class="text-slate-400">Bachelor Admin. Systèmes & Réseaux[cite: 1]</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-slate-800 text-center">
+                    <a href="CV-KHELIFI-A.pdf" download class="inline-flex items-center justify-center w-full bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono py-2.5 px-4 rounded-lg transition border border-slate-700">
+                        <i class="fa-solid fa-file-pdf text-red-400 mr-2"></i> Télécharger CV Complet (PDF)
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer / Contact Action Bar -->
+        <footer class="bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <h3 class="text-sm font-mono text-white font-bold"><i class="fa-solid fa-satellite-dish text-emerald-400 mr-2"></i> LANCER LA CONNEXION (CONTACT)</h3>
+                <p class="text-xs text-slate-400 mt-0.5">Recherche d'alternance • Valenciennois, Douaisis, Lille et périphéries[cite: 1]</p>
+            </div>
+            
+            <div class="flex flex-wrap gap-3 font-mono text-xs">
+                <a href="tel:0662685971" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2.5 rounded-lg transition flex items-center shadow-lg shadow-blue-900/30">
+                    <i class="fa-solid fa-phone mr-2"></i> 06 62 68 59 71[cite: 1]
+                </a>
+                <a href="mailto:khelifi.ahcene@gmail.com" class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2.5 rounded-lg transition flex items-center border border-slate-700">
+                    <i class="fa-solid fa-envelope mr-2"></i> khelifi.ahcene@gmail.com[cite: 1]
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-blue-400 px-4 py-2.5 rounded-lg transition flex items-center border border-slate-700">
+                    <i class="fa-brands fa-linkedin mr-2"></i> LinkedIn
+                </a>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Bottom Small Disclaimer -->
+    <footer class="text-center py-4 text-[10px] font-mono text-slate-600 border-t border-slate-900 mt-8">
+        Monitoring Dashboard v2.6 // Ahcéne KHELIFI - Bachelor Systèmes & Réseaux[cite: 1]
+    </footer>
+
+</body>
+</html>
